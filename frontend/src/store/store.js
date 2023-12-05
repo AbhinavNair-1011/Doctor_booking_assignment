@@ -3,13 +3,13 @@ import axios from "axios"
 
 
 export const fetchDoctors= createAsyncThunk("fetchDoctors",async()=>{
-  const doctors= await axios.get("http://localhost:3001/api/fetchDoctors");
+  const doctors= await axios.get("https://vscodehelp-assignment.onrender.com/api/fetchDoctors");
   console.log(doctors)
   return doctors.data
 })
 
 export const postAppointment=createAsyncThunk("postAppointment",async(data)=>{
-  const appointment=await axios.post("http://localhost:3001/api/postAppointment",data);
+  const appointment=await axios.post("https://vscodehelp-assignment.onrender.com/api/postAppointment",data);
 })
   const services=  [
     {
